@@ -1,19 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaMicrochip, FaComments, FaChartBar, FaProjectDiagram } from "react-icons/fa";
+import { IoLogoYoutube } from "react-icons/io5";
+import { FaDollarSign, FaSearch, FaRocket } from "react-icons/fa";
 
+// Services with descriptions & proper icons
 const services = [
-  { title: "Automation Machine Learning", icon: <FaMicrochip size={28} /> },
-  { title: "AI-Powered Chatbots", icon: <FaComments size={28} /> },
-  { title: "Data Analytics Deep Insights", icon: <FaChartBar size={28} /> },
-  { title: "AI Strategy Pro Consulting", icon: <FaProjectDiagram size={28} /> },
+  {
+    title: "YouTube Video Promotion",
+    description:
+      "Boost visibility with targeted campaigns that drive views, subscribers, and brand awareness.",
+    icon: <IoLogoYoutube size={42} className="text-red-500" />,
+  },
+  {
+    title: "YouTube Monetization",
+    description:
+      "Grow your channel to meet YouTube’s monetization policies and start earning from your content.",
+    icon: <FaDollarSign size={38} className="text-yellow-400" />,
+  },
+  {
+    title: "YouTube SEO",
+    description:
+      "Optimize video titles, tags, and descriptions to rank higher and reach the right audience organically.",
+    icon: <FaSearch size={38} className="text-green-400" />,
+  },
 ];
 
 export default function ServicesPage() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center bg-black text-white">
-      {/* Animated Background Blobs */}
+      {/* Animated Blobs */}
       <motion.div
         className="absolute top-10 left-[-5rem] w-[20rem] md:w-[28rem] h-[20rem] md:h-[28rem] bg-green-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
         animate={{ x: [0, 100, -80, 0], y: [0, 60, -60, 0], scale: [1, 1.2, 1] }}
@@ -36,35 +52,42 @@ export default function ServicesPage() {
         <motion.h2
           className="text-center text-xl md:text-2xl lg:text-3xl font-medium mb-14 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
         >
-          We are pioneers in{" "}
-          <span className="text-green-500 font-semibold">AI consulting</span>, dedicated to helping
-          businesses harness the power of artificial intelligence to drive innovation, efficiency,
-          and growth.
+          Helping creators grow with{" "}
+          <span className="text-green-500 font-semibold">strategic YouTube services</span>.
         </motion.h2>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.3,
+              },
+            },
+          }}
+        >
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className={`
-                group relative rounded-2xl p-6 flex flex-col justify-between h-80 md:h-96
-                shadow-md border border-gray-700 bg-gradient-to-b from-green-950 to-black
-                transition-all duration-500 hover:shadow-green-500/40
-              `}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ scale: 1.05 }}
+              className="group relative rounded-2xl p-6 flex flex-col justify-between h-96 shadow-md border border-gray-700 bg-gradient-to-b from-green-950 to-black transition-all duration-500 hover:shadow-green-500/40"
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+              }}
+              whileHover={{ scale: 1.05, y: -10 }}
             >
               {/* Icon */}
-              <div
-                className="w-12 h-12 flex items-center justify-center rounded-lg text-black
-                           bg-green-400 group-hover:bg-green-500 transition"
-              >
+              <div className="w-20 h-20 flex items-center justify-center rounded-lg bg-green-400/20 group-hover:bg-green-500/30 transition">
                 {service.icon}
               </div>
 
@@ -73,20 +96,21 @@ export default function ServicesPage() {
                 {service.title}
               </h3>
 
+              {/* Description */}
+              <p className="mt-3 text-sm text-gray-300 leading-relaxed">
+                {service.description}
+              </p>
+
               {/* Button */}
-              <button
-                className={`
-                  mt-6 py-2 px-4 rounded-md font-medium text-sm transition-all duration-500
-                  bg-green-600 text-white hover:bg-black border border-green-500
-                  group-hover:bg-gradient-to-r group-hover:from-green-600 
-                  group-hover:to-black group-hover:shadow-lg
-                `}
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="mt-6 py-2 px-4 rounded-md font-medium text-sm transition-all duration-500 bg-green-600 text-white hover:bg-black border border-green-500 group-hover:bg-gradient-to-r group-hover:from-green-600 group-hover:to-black group-hover:shadow-lg"
               >
                 Talk With Us
-              </button>
+              </motion.button>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

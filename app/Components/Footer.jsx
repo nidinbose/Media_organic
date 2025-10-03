@@ -24,9 +24,8 @@ export default function Footer() {
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-t border-gray-800 pt-10">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-green-400 text-2xl">⌘</span>
-            <h3 className="text-white font-semibold text-lg">TrustData</h3>
+          <div className="flex items-center gap-2 mb-4 ">
+         <img src="/Images/new.png" alt=""  className="w-20 h-20 bg-white/70"/>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed">
             TrustData — we specialize in automating your business processes,
@@ -34,13 +33,13 @@ export default function Footer() {
           </p>
           <div className="flex gap-3 mt-6">
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61564623054234"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-400 hover:text-black transition"
             >
               <FaFacebookF size={16} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/organic___media?igsh=ODl1aTIzZG54N2hl"
               className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-400 hover:text-black transition"
             >
               <FaInstagram size={16} />
@@ -76,10 +75,10 @@ export default function Footer() {
           <h4 className="text-white font-semibold mb-4">Contact Us</h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt className="text-green-400" /> +49 30 1234 7632
+              <FaPhoneAlt className="text-green-400" /> +91 7558007897
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope className="text-green-400" /> contact@trustdata.eu
+              <FaEnvelope className="text-green-400" /> organicmediapromotion@gmail.com
             </li>
             <li className="flex items-start gap-2">
               <FaMapMarkerAlt className="text-green-400 mt-1" /> 

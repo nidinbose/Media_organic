@@ -7,21 +7,21 @@ const blogs = [
     desc: "Exploring how artificial intelligence is transforming the medical field with smarter diagnostics and automation.",
     date: "Aug 25, 2025",
     author: "Dr. Sarah Johnson",
-    img: "https://images.pexels.com/photos/586338/pexels-photo-586338.jpeg",
+    img: "/Images/1.jpg",
   },
   {
     title: "Web3: Beyond Cryptocurrency",
     desc: "A deep dive into how blockchain is reshaping industries like supply chain, identity, and the creator economy.",
     date: "Aug 20, 2025",
     author: "Alex Carter",
-    img: "https://images.pexels.com/photos/6770772/pexels-photo-6770772.jpeg",
+    img: "/Images/2.jpg",
   },
   {
     title: "Green Tech Revolution",
     desc: "How renewable energy and sustainable technologies are paving the way for a cleaner planet.",
     date: "Aug 15, 2025",
     author: "Priya Sharma",
-    img: "https://images.pexels.com/photos/987544/pexels-photo-987544.jpeg",
+    img: "/Images/3.jpg",
   },
 ];
 
@@ -50,7 +50,7 @@ export default function BlogsPage() {
             className="rounded-2xl overflow-hidden bg-gradient-to-b from-gray-900/80 to-black/80 border border-green-500/40 backdrop-blur-xl cursor-pointer transition-all duration-300"
           >
             {/* Image */}
-            <div className="h-48 w-full overflow-hidden">
+            <div className="h-96 w-full overflow-hidden">
               <img
                 src={blog.img}
                 alt={blog.title}

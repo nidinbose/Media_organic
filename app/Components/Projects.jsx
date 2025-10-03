@@ -3,24 +3,24 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "CODE & CANVAS",
-    desc: "Merging art with modern code for futuristic designs.",
-    img: "https://img.freepik.com/free-photo/woman-face-close-up-paint-art_23-2149210732.jpg?w=740&q=80",
+    title: "YOUTUBE BOOST",
+    desc: "Helping creators gain organic subscribers and views with real engagement strategies.",
+    img: "https://img.freepik.com/free-photo/youtube-logo-social-media-icons-digital-3d-render_125540-3722.jpg?w=740&q=80",
   },
   {
-    title: "HYPERFRAME",
-    desc: "Immersive frameworks with creative AI-powered UI.",
-    img: "https://img.freepik.com/free-photo/ai-technology-microchip-background-futuristic-innovation_53876-129770.jpg",
+    title: "SEO POWER",
+    desc: "Boosting visibility with cutting-edge SEO to rank higher on Google & YouTube searches.",
+    img: "https://img.freepik.com/free-photo/seo-concept-with-laptop_23-2149402987.jpg?w=740&q=80",
   },
   {
-    title: "RENDERLAB",
-    desc: "3D rendering labs pushing creative visualization limits.",
-    img: "https://img.freepik.com/free-photo/abstract-digital-technology-background_34629-885.jpg",
+    title: "BRAND GROWTH",
+    desc: "Creating digital marketing campaigns that scale startups into global brands.",
+    img: "https://img.freepik.com/free-photo/social-media-icons-background-digital-3d-render_125540-3730.jpg?w=740&q=80",
   },
   {
-    title: "QUANTUM PIXEL",
-    desc: "Next-gen digital pixels for hyperrealistic graphics.",
-    img: "https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg",
+    title: "CREATOR SUCCESS",
+    desc: "From influencers to businesses, we help every story reach the right audience.",
+    img: "https://img.freepik.com/free-photo/influencer-recording-vlog-studio_23-2149073443.jpg?w=740&q=80",
   },
 ];
 
@@ -38,18 +38,17 @@ export default function ProjectsSection() {
         >
           <h2 className="text-3xl md:text-5xl font-extrabold leading-tight">
             OUR{" "}
-            <span className="text-green-400 drop-shadow-lg">PROJECTS</span>{" "}
-            SPEAK LOUDER
+            <span className="text-green-400 drop-shadow-lg">SUCCESS STORIES</span>
           </h2>
           <p className="text-gray-300/90 max-w-lg mx-auto lg:mx-0 text-base leading-relaxed">
-            Explore how we blend{" "}
-            <span className="text-green-400 font-medium">creativity</span>,{" "}
-            <span className="text-green-400 font-medium">design</span>, and{" "}
-            <span className="text-green-400 font-medium">technology</span> to
-            deliver projects that go beyond expectations.
+            From{" "}
+            <span className="text-green-400 font-medium">YouTube promotion</span> 
+            to{" "}
+            <span className="text-green-400 font-medium">digital marketing</span>, 
+            we’ve empowered creators and businesses to grow organically and reach millions.
           </p>
           <button className="px-6 py-3 bg-green-500 hover:bg-green-600 rounded-xl text-black font-semibold shadow-lg hover:scale-105 transition">
-            View All Projects
+            Explore Our Work
           </button>
         </motion.div>
 

@@ -1,28 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
-const cards = [
-  {
-    title: "GRAPHIC DESIGN",
-    subtitle: "VISUAL ARTS",
-    img: "https://img.freepik.com/free-photo/smiling-portrait-business-woman-beautiful_1303-2288.jpg?w=740&q=80",
-  },
-  {
-    title: "CREATIVE CONTENT CREATION",
-    subtitle: "SCRIPT WRITING & DEVELOPMENT",
-    img: "https://img.freepik.com/free-photo/smiling-portrait-business-woman-beautiful_1303-2288.jpg?w=740&q=80",
-  },
-  {
-    title: "FILM AND MEDIA PRODUCTION",
-    subtitle: "VIDEOGRAPHY AND PHOTOGRAPHY",
-    img: "https://img.freepik.com/free-photo/smiling-portrait-business-woman-beautiful_1303-2288.jpg?w=740&q=80",
-  },
-  {
-    title: "ADVERTISING FILM PRODUCTION",
-    subtitle: "TELLING A STORY",
-    img: "https://img.freepik.com/free-photo/smiling-portrait-business-woman-beautiful_1303-2288.jpg?w=740&q=80",
-  },
-];
+const cards = Array.from({ length: 21 }, (_, i) => ({
+  title: "POSTER DESIGN",
+  subtitle: "PROMOTIONS",
+  img: `/Images/${i + 1}.jpg`, // from 1.jpg → 21.jpg
+}));
 
 export default function Cards() {
   return (
@@ -32,7 +15,7 @@ export default function Cards() {
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           ease: "linear",
-          duration: 30,
+          duration: 250, // longer loop since we have 21 cards
           repeat: Infinity,
         }}
       >

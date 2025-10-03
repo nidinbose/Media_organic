@@ -5,7 +5,9 @@ import BlogsPage from "../Components/Blogs"
 import Cards from "../Components/Cards"
 import Footer from "../Components/Footer"
 import Landing from "../Components/Landing"
+import MonetizationPlans from "../Components/Monitorplan"
 import Navbar from "../Components/Navbar"
+import Posters from "../Components/Posters"
 import Pricing from "../Components/pricing"
 import ProjectsSection from "../Components/Projects"
 import ServicesPage from "../Components/Services"
@@ -17,8 +19,10 @@ export default function Hero(){
             <Navbar/>
             <Landing/>
              <AboutUs/>
+             <Posters/>
              <BlogsPage/>
             <ServicesPage/>
+            <MonetizationPlans/>
             <Cards/>
             <Pricing/>
             <Testimonial1/>
