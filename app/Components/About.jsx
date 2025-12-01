@@ -27,7 +27,7 @@ export default function AboutUs() {
         className="w-full lg:w-1/2 flex justify-center relative z-10 mb-8 lg:mb-0"
       >
         <img
-          src="https://img.freepik.com/free-photo/smiling-portrait-business-woman-beautiful_1303-2288.jpg?semt=ais_hybrid&w=740&q=80"
+          src="./Images/"
           alt="About Us"
           className="max-h-[400px] md:max-h-[500px] lg:max-h-[600px] object-contain rounded-xl shadow-2xl"
         />
